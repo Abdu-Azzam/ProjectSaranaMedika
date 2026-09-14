@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,22 +15,28 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
-    <!-- Main stylesheet -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
     <header class="navbar">
+
         <div class="container nav-wrapper">
 
-            <a href="#" class="logo">
+            <!-- Logo -->
+            <a href="#home" class="logo">
+
                 <img
                     src="icon2/logo.png"
                     alt="Logo Indomas Sarana Medika"
@@ -40,54 +47,103 @@
                     <strong>INDOMAS</strong>
                     <small>SARANA MEDIKA</small>
                 </div>
+
             </a>
 
-            <nav class="nav-menu">
+
+            <!-- Navigation -->
+            <nav
+                id="main-nav"
+                class="nav-menu"
+                aria-label="Navigasi utama"
+            >
+
                 <a href="#home">Home</a>
-                <a href="#services" >Services</a>
+
+                <a href="#services">Services</a>
+
                 <a href="#about">Tentang Kami</a>
 
+
+                <!-- Dropdown -->
                 <div class="dropdown">
-                    <a href="#services">
+
+                    <a href="#services" class="dropdown-toggle">
                         Layanan
-                        <span>⌄</span>
+                        <span aria-hidden="true">⌄</span>
                     </a>
 
                     <div class="dropdown-menu">
-                        <a href="#construction">Jasa Konstruksi</a>
-                        <a href="#procurement">Pengadaan Barang</a>
+
+                        <a href="#construction">
+                            Jasa Konstruksi
+                        </a>
+
+                        <a href="#procurement">
+                            Pengadaan Barang
+                        </a>
+
                     </div>
+
                 </div>
 
-                <a href="#partners">Partner</a>
-                <!-- <a href="#blog">Blog</a> -->
-                <a href="#contact">Kontak</a>
+
+                <a href="#partners">
+                    Partner
+                </a>
+
+                <a href="#contact">
+                    Kontak
+                </a>
+
             </nav>
 
+
+            <!-- CTA Navbar -->
             <a href="#contact" class="nav-button">
                 Hubungi Kami
             </a>
 
-            <button class="menu-toggle" aria-label="Buka menu">
+
+            <!-- Mobile Menu -->
+            <button
+                type="button"
+                class="menu-toggle"
+                aria-label="Buka menu"
+                aria-controls="main-nav"
+                aria-expanded="false"
+            >
                 ☰
             </button>
 
         </div>
+
     </header>
 
 
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
     <main>
 
-        <!-- ================= HERO ================= -->
-        <section class="hero hero--alkes" id="home">
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+        <section
+            class="hero hero--alkes"
+            id="home"
+        >
 
             <div class="hero-overlay"></div>
+
 
             <div class="container hero-content">
 
                 <p class="hero-label">
-                    GENERAL CONTRACTOR & SUPPLIER
+                    GENERAL CONTRACTOR &amp; SUPPLIER
                 </p>
+
 
                 <h1 class="hero-title">
                     Your Trusted
@@ -95,26 +151,40 @@
                     Partner.
                 </h1>
 
+
                 <p class="hero-description">
-                    Solusi profesional dalam konstruksi, pengadaan alat kesehatan,
-                    perawatan fasilitas, dan layanan terpadu untuk kebutuhan
-                    pelayanan kesehatan.
+                    Solusi profesional dalam konstruksi, pengadaan alat
+                    kesehatan, perawatan fasilitas, dan layanan terpadu
+                    untuk kebutuhan pelayanan kesehatan.
                 </p>
 
+
                 <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">
+
+                    <a
+                        href="#services"
+                        class="btn btn-primary"
+                    >
                         Lihat Layanan
-                        <span>→</span>
+                        <span aria-hidden="true">→</span>
                     </a>
 
-                    <a href="#about" class="btn btn-outline">
+
+                    <a
+                        href="#about"
+                        class="btn btn-outline"
+                    >
                         Tentang Kami
                     </a>
+
                 </div>
 
             </div>
 
+
+            <!-- Hero Information -->
             <div class="hero-bottom">
+
                 <div class="container hero-info">
 
                     <div>
@@ -133,14 +203,21 @@
                     </div>
 
                 </div>
+
             </div>
 
         </section>
 
 
-        <!-- section class="services section" id="services"> -->
 
-        <section class="services section" id="services">
+        <!-- =================================================
+             SERVICES / TARGET LAYANAN
+        ================================================== -->
+        <section
+            class="services section"
+            id="services"
+        >
+
             <div class="container">
 
                 <div class="section-heading center">
@@ -149,121 +226,351 @@
                         LAYANAN KAMI
                     </p>
 
-                    <h2 class="section-title section-title--small">Melayani Pengadaan Alat Kesehatan<br class="desktop-break"> Berkualitas Untuk :</h2>
 
-                    <div class="service-logos" aria-label="Target layanan">
+                    <h2 class="section-title section-title--small">
+                        Melayani Pengadaan Alat Kesehatan
+                        <br class="desktop-break">
+                        Berkualitas Untuk :
+                    </h2>
+
+
+                    <!-- Target Service -->
+                    <div
+                        class="service-logos"
+                        aria-label="Target layanan"
+                    >
+
                         <div class="service-logo-item">
-                            <img class="service-logo-icon" src="icon/rums.png" alt="Rumah Sakit">
-                            <span>Rumah Sakit</span>
+
+                            <img
+                                class="service-logo-icon"
+                                src="icon/rums.png"
+                                alt="Rumah Sakit"
+                            >
+
+                            <span>
+                                Rumah Sakit
+                            </span>
+
                         </div>
+
+
                         <div class="service-logo-item">
-                            <img class="service-logo-icon" src="icon/puskesmas.png" alt="Puskesmas">
-                            <span>Puskesmas</span>
+
+                            <img
+                                class="service-logo-icon"
+                                src="icon/puskesmas.png"
+                                alt="Puskesmas"
+                            >
+
+                            <span>
+                                Puskesmas
+                            </span>
+
                         </div>
+
+
                         <div class="service-logo-item">
-                            <img class="service-logo-icon" src="icon/c.png" alt="klinik">
-                            <span>Klinik</span>
+
+                            <img
+                                class="service-logo-icon"
+                                src="icon/c.png"
+                                alt="Klinik"
+                            >
+
+                            <span>
+                                Klinik
+                            </span>
+
                         </div>
+
+
                         <div class="service-logo-item">
-                            <img class="service-logo-icon" src="icon/lab.png" alt="Laboratorium">
-                            <span>Laboratorium</span>
+
+                            <img
+                                class="service-logo-icon"
+                                src="icon/lab.png"
+                                alt="Laboratorium"
+                            >
+
+                            <span>
+                                Laboratorium
+                            </span>
+
                         </div>
+
+
                         <div class="service-logo-item">
-                            <img class="service-logo-icon" src="icon/apotek.png" alt="Apotek">
-                            <span>Apotek</span>
+
+                            <img
+                                class="service-logo-icon"
+                                src="icon/apotek.png"
+                                alt="Apotek"
+                            >
+
+                            <span>
+                                Apotek
+                            </span>
+
                         </div>
-                         <div class="service-logo-item">
-                            <img class="service-logo-icon" src="icon/instansi.png" alt="Instansi">
-                            <span>Instansi</span>
+
+
+                        <div class="service-logo-item">
+
+                            <img
+                                class="service-logo-icon"
+                                src="icon/instansi.png"
+                                alt="Instansi"
+                            >
+
+                            <span>
+                                Instansi
+                            </span>
+
                         </div>
-                         <div class="service-logo-item">
-                            <img class="service-logo-icon" src="icon/swasta.png" alt="Swasta">
-                            <span>Swasta</span>
+
+
+                        <div class="service-logo-item">
+
+                            <img
+                                class="service-logo-icon"
+                                src="icon/swasta.png"
+                                alt="Swasta"
+                            >
+
+                            <span>
+                                Swasta
+                            </span>
+
                         </div>
+
                     </div>
 
+
                     <p>
-                        Kami Menghadirkan Solusi Pengadaan Alat Kesehatan yang Terpercaya, Efisien, dan Berstandar Tinggi.
+                        Kami menghadirkan solusi pengadaan alat kesehatan
+                        yang terpercaya, efisien, dan berstandar tinggi.
                     </p>
 
                 </div>
-            </section>
+
+            </div>
+
+        </section>
 
 
-            <!-- Mengapa Memilih Kami? -->
-            <section class="why-choose section">
-                <div class="container">
-                    <div class="section-heading center">
-                        <p class="section-label">MENGAPA MEMILIH KAMI</p>
-                        <h2 class="section-title">Keunggulan Kami untuk Pelayanan Kesehatan</h2>
-                    </div>
 
-                    <div class="why-logos" aria-label="Alasan memilih kami">
-                        <div class="why-logo-item">
-                            <img class="why-logo-icon" src="icon2/2.png" alt="Produk Original">
-                            <span>Produk Original</span>
-                        </div>
-                        <div class="why-logo-item">
-                            <img class="why-logo-icon" src="icon2/3.png" alt="Bergaransi">
-                            <span>Bergaransi</span>
-                        </div>
-                        <div class="why-logo-item">
-                            <img class="why-logo-icon" src="icon2/4.png" alt="Distributor Terpercaya">
-                            <span>Distributor Terpercaya</span>
-                        </div>
-                        <div class="why-logo-item">
-                            <img class="why-logo-icon" src="icon2/5.png" alt="Harga Kompetitif">
-                            <span>Harga Kompetitif</span>
-                        </div>
-                        <div class="why-logo-item">
-                            <img class="why-logo-icon" src="icon2/6.png" alt="Fast Response">
-                            <span>Fast Response</span>
-                        </div>
-                        <div class="why-logo-item">
-                            <img class="why-logo-icon" src="icon2/7.png" alt="Pengiriman Cepat">
-                            <span>Pengiriman Cepat</span>
-                        </div>
-                        <div class="why-logo-item">
-                            <img class="why-logo-icon" src="icon2/8.png" alt="Mendukung Pengadaan Pemerintah">
-                            <span>Mendukung Pengadaan Pemerintah</span>
-                        </div>
-                        <div class="why-logo-item">
-                            <img class="why-logo-icon" src="icon2/9.png" alt="Pelayanan Profesional">
-                            <span>Pelayanan Profesional</span>
-                        </div>
-                    </div>
+        <!-- =================================================
+             WHY CHOOSE US
+        ================================================== -->
+        <section class="why-choose section">
+
+            <div class="container">
+
+                <div class="section-heading center">
+
+                    <p class="section-label">
+                        MENGAPA MEMILIH KAMI
+                    </p>
+
+                    <h2 class="section-title">
+                        Keunggulan Kami untuk Pelayanan Kesehatan
+                    </h2>
+
                 </div>
-            </section>
-                
-        <!-- ================= ABOUT ================= -->
-        <section class="about section" id="about">
+
+
+                <div
+                    class="why-logos"
+                    aria-label="Alasan memilih kami"
+                >
+
+                    <div class="why-logo-item">
+
+                        <img
+                            class="why-logo-icon"
+                            src="icon2/2.png"
+                            alt="Produk Original"
+                        >
+
+                        <span>
+                            Produk Original
+                        </span>
+
+                    </div>
+
+
+                    <div class="why-logo-item">
+
+                        <img
+                            class="why-logo-icon"
+                            src="icon2/3.png"
+                            alt="Bergaransi"
+                        >
+
+                        <span>
+                            Bergaransi
+                        </span>
+
+                    </div>
+
+
+                    <div class="why-logo-item">
+
+                        <img
+                            class="why-logo-icon"
+                            src="icon2/4.png"
+                            alt="Distributor Terpercaya"
+                        >
+
+                        <span>
+                            Distributor Terpercaya
+                        </span>
+
+                    </div>
+
+
+                    <div class="why-logo-item">
+
+                        <img
+                            class="why-logo-icon"
+                            src="icon2/5.png"
+                            alt="Harga Kompetitif"
+                        >
+
+                        <span>
+                            Harga Kompetitif
+                        </span>
+
+                    </div>
+
+
+                    <div class="why-logo-item">
+
+                        <img
+                            class="why-logo-icon"
+                            src="icon2/6.png"
+                            alt="Fast Response"
+                        >
+
+                        <span>
+                            Fast Response
+                        </span>
+
+                    </div>
+
+
+                    <div class="why-logo-item">
+
+                        <img
+                            class="why-logo-icon"
+                            src="icon2/7.png"
+                            alt="Pengiriman Cepat"
+                        >
+
+                        <span>
+                            Pengiriman Cepat
+                        </span>
+
+                    </div>
+
+
+                    <div class="why-logo-item">
+
+                        <img
+                            class="why-logo-icon"
+                            src="icon2/8.png"
+                            alt="Mendukung Pengadaan Pemerintah"
+                        >
+
+                        <span>
+                            Mendukung Pengadaan Pemerintah
+                        </span>
+
+                    </div>
+
+
+                    <div class="why-logo-item">
+
+                        <img
+                            class="why-logo-icon"
+                            src="icon2/9.png"
+                            alt="Pelayanan Profesional"
+                        >
+
+                        <span>
+                            Pelayanan Profesional
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+        <section
+            class="about section"
+            id="about"
+        >
 
             <div class="container about-grid">
 
+
+                <!-- About Image -->
                 <div class="about-image">
+
                     <img
                         src="tentang.png"
-                        alt="Proyek konstruksi"
+                        alt="Peralatan dan fasilitas pelayanan kesehatan"
                     >
 
+
                     <div class="experience-card">
-                        <strong>Helthcare Tools</strong>
-                       
+
+                        <strong>
+                            Healthcare Tools
+                        </strong>
+
                     </div>
+
                 </div>
 
+
+                <!-- About Content -->
                 <div class="about-content">
 
                     <p class="section-label">
                         TENTANG KAMI
                     </p>
 
-                    <h2 class="section-title">Partner Profesional<br class="desktop-break"> untuk Setiap Kebutuhan</h2>
+
+                    <h2 class="section-title">
+                        Partner Profesional
+                        <br class="desktop-break">
+                        untuk Setiap Kebutuhan
+                    </h2>
+
 
                     <p>
-                        PT Indomas Sarana Medika merupakan perusahaan yang bergerak di bidang pengadaan alat kesehatan dan kebutuhan penunjang pelayanan kesehatan. Dengan komitmen terhadap kualitas, profesionalisme, dan integritas, kami hadir untuk memberikan solusi terbaik bagi instansi pemerintah, rumah sakit, klinik, laboratorium, dan sektor swasta.
+                        PT Indomas Sarana Medika merupakan perusahaan yang
+                        bergerak di bidang pengadaan alat kesehatan dan
+                        kebutuhan penunjang pelayanan kesehatan.
                     </p>
 
+
+                    <p>
+                        Dengan komitmen terhadap kualitas, profesionalisme,
+                        dan integritas, kami hadir untuk memberikan solusi
+                        terbaik bagi instansi pemerintah, rumah sakit,
+                        klinik, laboratorium, dan sektor swasta.
+                    </p>
 
                 </div>
 
@@ -272,88 +579,170 @@
         </section>
 
 
-        <!-- ================= VALUES ================= -->
+
+        <!-- =================================================
+             VALUES
+        ================================================== -->
         <section class="values section">
 
             <div class="container">
 
                 <div class="section-heading center">
-                    <p class="section-label">NILAI-NILAI KAMI</p>
 
-                    <h2 class="section-title">Mengutamakan Kualitas<br class="desktop-break"> dalam Setiap Pekerjaan</h2>
+                    <p class="section-label">
+                        NILAI-NILAI KAMI
+                    </p>
+
+
+                    <h2 class="section-title">
+                        Mengutamakan Kualitas
+                        <br class="desktop-break">
+                        dalam Setiap Pekerjaan
+                    </h2>
+
                 </div>
+
 
                 <div class="values-grid">
 
+
+                    <!-- Value 01 -->
                     <article class="value-card">
-                        <div class="value-number">01</div>
+
+                        <div class="value-number">
+                            01
+                        </div>
+
 
                         <div class="value-icon">
                             ✦
                         </div>
 
-                        <h3>Visi Perusahaan</h3>
+
+                        <h3>
+                            Visi Perusahaan
+                        </h3>
+
 
                         <p>
-                            Menjadi perusahaan pengadaan alat kesehatan yang terpercaya, 
-                            profesional, dan berdaya saing tinggi dalam menyediakan 
-                            produk dan solusi kesehatan berkualitas guna mendukung peningkatan 
+                            Menjadi perusahaan pengadaan alat kesehatan
+                            yang terpercaya, profesional, dan berdaya saing
+                            tinggi dalam menyediakan produk dan solusi
+                            kesehatan berkualitas guna mendukung peningkatan
                             pelayanan kesehatan di Indonesia.
                         </p>
+
                     </article>
 
+
+
+                    <!-- Value 02 -->
                     <article class="value-card">
-                        <div class="value-number">02</div>
+
+                        <div class="value-number">
+                            02
+                        </div>
+
 
                         <div class="value-icon">
                             ◇
                         </div>
 
-                        <h3>Misi Perusahaan</h3>
 
-                        <p>
-                            1. Menyediakan alat dan produk kesehatan berkualitas sesuai standar yang berlaku.
-                            <br> 
-                            2. Memberikan pelayanan yang cepat, tepat, dan profesional. 
-                            <br>
-                            3. Membangun kemitraan strategis yang berkelanjutan dengan pelanggan dan mitra usaha. 
-                            <br>
-                            4. Menjalankan bisnis berdasarkan integritas, transparansi, dan tata kelola yang baik.
-                            <br>
-                            5. Mengembangkan sumber daya manusia yang kompeten dan berorientasi pada pelayanan. 
+                        <h3>
+                            Misi Perusahaan
+                        </h3>
 
-                            6. Berkontribusi terhadap peningkatan mutu pelayanan kesehatan di Indonesia.
-                        </p>
+
+                        <ol class="mission-list">
+
+                            <li>
+                                Menyediakan alat dan produk kesehatan
+                                berkualitas sesuai standar yang berlaku.
+                            </li>
+
+                            <li>
+                                Memberikan pelayanan yang cepat, tepat,
+                                dan profesional.
+                            </li>
+
+                            <li>
+                                Membangun kemitraan strategis yang
+                                berkelanjutan dengan pelanggan dan
+                                mitra usaha.
+                            </li>
+
+                            <li>
+                                Menjalankan bisnis berdasarkan integritas,
+                                transparansi, dan tata kelola yang baik.
+                            </li>
+
+                            <li>
+                                Mengembangkan sumber daya manusia yang
+                                kompeten dan berorientasi pada pelayanan.
+                            </li>
+
+                            <li>
+                                Berkontribusi terhadap peningkatan mutu
+                                pelayanan kesehatan di Indonesia.
+                            </li>
+
+                        </ol>
+
                     </article>
 
+
+
+                    <!-- Value 03 -->
                     <article class="value-card">
-                        <div class="value-number">03</div>
+
+                        <div class="value-number">
+                            03
+                        </div>
+
 
                         <div class="value-icon">
                             ◎
                         </div>
 
-                        <h3>Tim Profesional</h3>
+
+                        <h3>
+                            Tim Profesional
+                        </h3>
+
 
                         <p>
                             Didukung tenaga ahli yang berpengalaman dan
                             memiliki dedikasi tinggi.
                         </p>
+
                     </article>
 
+
+
+                    <!-- Value 04 -->
                     <article class="value-card">
-                        <div class="value-number">04</div>
+
+                        <div class="value-number">
+                            04
+                        </div>
+
 
                         <div class="value-icon">
                             ↗
                         </div>
 
-                        <h3>Layanan Terpadu</h3>
+
+                        <h3>
+                            Layanan Terpadu
+                        </h3>
+
 
                         <p>
-                            Memberikan solusi dari tahap perencanaan hingga
-                            pelaksanaan dan perawatan.
+                            Memberikan solusi dari tahap perencanaan
+                            hingga pelaksanaan dan perawatan.
                         </p>
+
                     </article>
 
                 </div>
@@ -363,8 +752,52 @@
         </section>
 
 
-        <!-- ================= PROCUREMENT ================= -->
-        <section class="procurement section" id="procurement">
+
+        <!-- =================================================
+             CONSTRUCTION
+        ================================================== -->
+        <section
+            class="construction section"
+            id="construction"
+        >
+
+            <div class="container">
+
+                <div class="section-heading center">
+
+                    <p class="section-label">
+                        GENERAL CONTRACTOR
+                    </p>
+
+
+                    <h2 class="section-title">
+                        Jasa Konstruksi dan
+                        <br class="desktop-break">
+                        Perawatan Fasilitas
+                    </h2>
+
+
+                    <p>
+                        Kami menyediakan layanan konstruksi dan perawatan
+                        fasilitas yang mendukung kebutuhan operasional
+                        pelayanan kesehatan.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROCUREMENT
+        ================================================== -->
+        <section
+            class="procurement section"
+            id="procurement"
+        >
 
             <div class="container">
 
@@ -374,98 +807,177 @@
                         PROCUREMENT
                     </p>
 
-                    <h2 class="section-title">Pengadaan Barang &amp;<br class="desktop-break"> Perlengkapan Alat Kesehatan</h2>
+
+                    <h2 class="section-title">
+                        Pengadaan Barang &amp;
+                        <br class="desktop-break">
+                        Perlengkapan Alat Kesehatan
+                    </h2>
 
                 </div>
 
+
                 <div class="product-grid">
 
+
+                    <!-- Product 01 -->
                     <article class="product-card">
 
                         <img
                             src="katalog/diagnosis.png"
-                            alt="Laptop"
+                            alt="Diagnostic Equipment"
                         >
 
+
                         <div>
-                            <small>01</small>
-                            <h3>Diasnotic Equipment</h3>
+
+                            <small>
+                                01
+                            </small>
+
+
+                            <h3>
+                                Diagnostic Equipment
+                            </h3>
+
+
                             <p>
-                                Tensimeter Digital, stetoskop, Thermometer, dll.
+                                Tensimeter digital, stetoskop,
+                                thermometer, dan perlengkapan diagnostik
+                                lainnya.
                             </p>
+
                         </div>
 
                     </article>
 
 
+
+                    <!-- Product 02 -->
                     <article class="product-card">
 
                         <img
                             src="katalog/hospital.png"
-                            alt="Alat kesehatan"
+                            alt="Hospital Equipment"
                         >
 
+
                         <div>
-                            <small>02</small>
-                            <h3>Hospital Equipment</h3>
+
+                            <small>
+                                02
+                            </small>
+
+
+                            <h3>
+                                Hospital Equipment
+                            </h3>
+
+
                             <p>
-                                Hospital Bed, Emergency Bed, Infusion Stand, dll.
+                                Hospital Bed, Emergency Bed,
+                                Infusion Stand, dan perlengkapan rumah
+                                sakit lainnya.
                             </p>
+
                         </div>
 
                     </article>
 
 
+
+                    <!-- Product 03 -->
                     <article class="product-card">
 
                         <img
                             src="katalog/furniture.png"
-                            alt="Alat keselamatan kerja"
+                            alt="Medical Furniture"
                         >
 
+
                         <div>
-                            <small>03</small>
-                            <h3>Medical Furniture</h3>
+
+                            <small>
+                                03
+                            </small>
+
+
+                            <h3>
+                                Medical Furniture
+                            </h3>
+
+
                             <p>
-                                Examination Bed, Instrument Cabinet, Medicine Cabinet, dll.
+                                Examination Bed, Instrument Cabinet,
+                                Medicine Cabinet, dan perlengkapan
+                                furniture medis lainnya.
                             </p>
+
                         </div>
 
                     </article>
 
 
+
+                    <!-- Product 04 -->
                     <article class="product-card">
 
                         <img
                             src="katalog/consum.png"
-                            alt="Alat bangunan"
+                            alt="Medical Consumables"
                         >
 
+
                         <div>
-                            <small>04</small>
-                            <h3>Medical Consumables</h3>
+
+                            <small>
+                                04
+                            </small>
+
+
+                            <h3>
+                                Medical Consumables
+                            </h3>
+
+
                             <p>
-                                Syringe, Gloves, Mask, dll.
+                                Syringe, gloves, mask, dan berbagai
+                                kebutuhan medis habis pakai.
                             </p>
+
                         </div>
 
                     </article>
 
 
+
+                    <!-- Product 05 -->
                     <article class="product-card">
 
                         <img
                             src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80"
                             alt="Alat kebersihan"
+                            loading="lazy"
                         >
 
+
                         <div>
-                            <small>05</small>
-                            <h3>Alat Kebersihan</h3>
+
+                            <small>
+                                05
+                            </small>
+
+
+                            <h3>
+                                Alat Kebersihan
+                            </h3>
+
+
                             <p>
-                                Peralatan pembersih, sanitasi, dan bahan
-                                kebersihan.
+                                Peralatan pembersih, sanitasi, dan
+                                bahan kebersihan.
                             </p>
+
                         </div>
 
                     </article>
@@ -477,7 +989,10 @@
         </section>
 
 
-        <!-- ================= CTA / INNOVATION ================= -->
+
+        <!-- =================================================
+             INNOVATION / CTA
+        ================================================== -->
         <section class="innovation">
 
             <div class="container innovation-content">
@@ -486,10 +1001,17 @@
                     INOVASI TERBAIK
                 </p>
 
+
                 <h2 class="innovation-title">
+
                     Efisiensi dalam Setiap Langkah,
-                    <span>Kualitas dalam Setiap Proyek.</span>
+
+                    <span>
+                        Kualitas dalam Setiap Proyek.
+                    </span>
+
                 </h2>
+
 
                 <p>
                     Dengan nilai integritas, profesionalisme, dan tanggung
@@ -497,9 +1019,13 @@
                     dan bermanfaat bagi setiap klien.
                 </p>
 
-                <a href="#contact" class="btn btn-light">
+
+                <a
+                    href="#contact"
+                    class="btn btn-light"
+                >
                     Konsultasikan Proyek
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
 
             </div>
@@ -507,8 +1033,14 @@
         </section>
 
 
-        <!-- ================= PARTNERS ================= -->
-        <section class="partners section" id="partners">
+
+        <!-- =================================================
+             PARTNERS
+        ================================================== -->
+        <section
+            class="partners section"
+            id="partners"
+        >
 
             <div class="container">
 
@@ -518,18 +1050,39 @@
                         PARTNER KAMI
                     </p>
 
-                    <h2 class="section-title">Dipercaya oleh Berbagai Partner</h2>
+
+                    <h2 class="section-title">
+                        Dipercaya oleh Berbagai Partner
+                    </h2>
 
                 </div>
+
 
                 <div class="partner-grid">
 
-                    <div class="partner-logo">PARTNER 01</div>
-                    <div class="partner-logo">PARTNER 02</div>
-                    <div class="partner-logo">PARTNER 03</div>
-                    <div class="partner-logo">PARTNER 04</div>
-                    <div class="partner-logo">PARTNER 05</div>
-                    <div class="partner-logo">PARTNER 06</div>
+                    <div class="partner-logo">
+                        PARTNER 01
+                    </div>
+
+                    <div class="partner-logo">
+                        PARTNER 02
+                    </div>
+
+                    <div class="partner-logo">
+                        PARTNER 03
+                    </div>
+
+                    <div class="partner-logo">
+                        PARTNER 04
+                    </div>
+
+                    <div class="partner-logo">
+                        PARTNER 05
+                    </div>
+
+                    <div class="partner-logo">
+                        PARTNER 06
+                    </div>
 
                 </div>
 
@@ -537,184 +1090,113 @@
 
         </section>
 
-          <!-- Kami Melayani -->
-        <section class="service section">
-            <div class="container">
 
+
+        <!-- =================================================
+             SERVICE CHANNEL
+        ================================================== -->
+        <section class="service section">
+
+            <div class="container">
 
                 <div class="service-grid">
 
+
                     <article class="service-card">
+
                         <img
                             src="icon3/16.png"
-                            alt="KATALOG"
+                            alt="Katalog"
+                            loading="lazy"
                         >
 
                     </article>
 
+
                     <article class="service-card">
+
                         <img
                             src="icon3/17.png"
                             alt="INAPROC"
+                            loading="lazy"
                         >
 
                     </article>
 
+
                     <article class="service-card">
+
                         <img
                             src="icon3/18.png"
                             alt="Pengadaan"
+                            loading="lazy"
                         >
 
                     </article>
 
+
                     <article class="service-card">
+
                         <img
                             src="icon3/19.png"
                             alt="Retail"
+                            loading="lazy"
                         >
 
                     </article>
 
+
                     <article class="service-card">
+
                         <img
                             src="icon3/20.png"
                             alt="Grosir"
+                            loading="lazy"
                         >
 
                     </article>
 
-                    
-
                 </div>
 
             </div>
+
         </section>
 
-        <!-- ================= BLOG ================= -->
-        <!-- <section class="blog section" id="blog">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <div>
-                        <p class="section-label">
-                            BLOG & ARTIKEL
-                        </p>
-
-                        <h2 class="section-title">Informasi &amp; Insight</h2>
-                    </div>
-
-                    <a href="#" class="text-link">
-                        Lihat Semua Artikel →
-                    </a>
-
-                </div>
 
 
-                <div class="blog-grid">
-
-                    <article class="blog-card">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80"
-                            alt="General contractor"
-                        >
-
-                        <div class="blog-content">
-
-                            <small>
-                                11 SEPTEMBER 2024
-                            </small>
-
-                            <h3>
-                                Jasa General Contractor Profesional
-                            </h3>
-
-                            <a href="#">
-                                Baca Artikel →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="blog-card">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80"
-                            alt="Pengadaan barang"
-                        >
-
-                        <div class="blog-content">
-
-                            <small>
-                                11 SEPTEMBER 2024
-                            </small>
-
-                            <h3>
-                                Pengadaan Barang & Perlengkapan Kantor
-                            </h3>
-
-                            <a href="#">
-                                Baca Artikel →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="blog-card">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80"
-                            alt="Desain arsitektur"
-                        >
-
-                        <div class="blog-content">
-
-                            <small>
-                                11 SEPTEMBER 2024
-                            </small>
-
-                            <h3>
-                                Jasa Desain Arsitektur & Interior
-                            </h3>
-
-                            <a href="#">
-                                Baca Artikel →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section> -->
-
-
-        <!-- ================= CONTACT CTA ================= -->
-        <section class="contact-cta" id="contact">
+        <!-- =================================================
+             CONTACT CTA
+        ================================================== -->
+        <section
+            class="contact-cta"
+            id="contact"
+        >
 
             <div class="container contact-wrapper">
 
+
                 <div>
+
                     <p class="section-label">
                         BUTUH BANTUAN?
                     </p>
 
-                    <h2 class="section-title">Mari Diskusikan<br class="desktop-break"> Proyek Anda.</h2>
+
+                    <h2 class="section-title">
+                        Mari Diskusikan
+                        <br class="desktop-break">
+                        Proyek Anda.
+                    </h2>
+
                 </div>
 
-                <a href="#" class="btn btn-primary">
+
+                <a
+                    href="tel:081386764817"
+                    class="btn btn-primary"
+                >
                     Hubungi Kami
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
 
             </div>
@@ -724,14 +1206,22 @@
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
     <footer class="footer">
 
         <div class="container footer-grid">
 
+
+            <!-- Company -->
             <div class="footer-company">
 
-                <a href="#" class="logo footer-logo">
+                <a
+                    href="#home"
+                    class="logo footer-logo"
+                >
 
                     <img
                         src="icon2/logo.png"
@@ -739,62 +1229,139 @@
                         class="logo-mark"
                     >
 
+
                     <div class="logo-text">
-                        <strong>INDOMAS</strong>
-                        <small>SARANA MEDIKA</small>
+
+                        <strong>
+                            INDOMAS
+                        </strong>
+
+                        <small>
+                            SARANA MEDIKA
+                        </small>
+
                     </div>
 
                 </a>
 
+
                 <p>
-                   Solusi profesional dalam konstruksi, pengadaan alat kesehatan, perawatan fasilitas, dan layanan terpadu untuk kebutuhan pelayanan kesehatan.
+                    Solusi profesional dalam konstruksi, pengadaan alat
+                    kesehatan, perawatan fasilitas, dan layanan terpadu
+                    untuk kebutuhan pelayanan kesehatan.
                 </p>
 
             </div>
 
 
+
+            <!-- Company Links -->
             <div class="footer-column">
 
-                <h4>Perusahaan</h4>
+                <h4>
+                    Perusahaan
+                </h4>
 
-                <a href="#about">Tentang Kami</a>
-                <a href="#partners">Partner</a>
-                <a href="#blog">Blog</a>
-                <a href="#contact">Kontak</a>
+
+                <a href="#about">
+                    Tentang Kami
+                </a>
+
+
+                <a href="#partners">
+                    Partner
+                </a>
+
+
+                <a href="#contact">
+                    Kontak
+                </a>
 
             </div>
 
 
+
+            <!-- Services -->
             <div class="footer-column">
 
-                <h4>Layanan</h4>
+                <h4>
+                    Layanan
+                </h4>
 
-                <a href="#construction">Konstruksi</a>
-                <a href="#procurement">Pengadaan Barang</a>
-                <a href="#">Perawatan</a>
-                <a href="#">Sewage Treatment</a>
+
+                <a href="#construction">
+                    Konstruksi
+                </a>
+
+
+                <a href="#procurement">
+                    Pengadaan Barang
+                </a>
+
+
+                <a href="#construction">
+                    Perawatan
+                </a>
+
+
+                <a href="#construction">
+                    Sewage Treatment
+                </a>
 
             </div>
 
 
+
+            <!-- Contact -->
             <div class="footer-column footer-contact">
 
-                <h4>Kontak Kami</h4>
+                <h4>
+                    Kontak Kami
+                </h4>
+
 
                 <p>
-                    <strong>Office</strong><br>
-                    Jl. TB Simatupang No.29,<br>
+
+                    <strong>
+                        Office
+                    </strong>
+
+                    <br>
+
+                    Jl. TB Simatupang No.29,
+                    <br>
                     Jakarta Selatan
+
                 </p>
 
-                <p>
-                    <strong>Telepon</strong><br>
-                    0813 8676 4817
-                </p>
 
                 <p>
-                    <strong>Email</strong><br>
-                    info@rekananjakarta.com
+
+                    <strong>
+                        Telepon
+                    </strong>
+
+                    <br>
+
+                    <a href="tel:081386764817">
+                        0813 8676 4817
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Email
+                    </strong>
+
+                    <br>
+
+                    <a href="mailto:info@rekananjakarta.com">
+                        info@rekananjakarta.com
+                    </a>
+
                 </p>
 
             </div>
@@ -802,6 +1369,8 @@
         </div>
 
 
+
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
 
             <div class="container">
@@ -811,8 +1380,9 @@
                     All Rights Reserved.
                 </p>
 
+
                 <p>
-                    General Contractor & Supplier
+                    General Contractor &amp; Supplier
                 </p>
 
             </div>
@@ -821,5 +1391,170 @@
 
     </footer>
 
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION SCRIPT
+    ====================================================== -->
+    <script>
+
+        (function () {
+
+            const btn = document.querySelector('.menu-toggle');
+            const navbar = document.querySelector('.navbar');
+            const nav = document.getElementById('main-nav');
+            const body = document.body;
+
+
+            if (!btn || !navbar || !nav) {
+                return;
+            }
+
+
+            function closeMenu() {
+
+                navbar.classList.remove('open');
+
+                body.classList.remove('no-scroll');
+
+                btn.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
+
+                btn.setAttribute(
+                    'aria-label',
+                    'Buka menu'
+                );
+
+            }
+
+
+            function openMenu() {
+
+                navbar.classList.add('open');
+
+                body.classList.add('no-scroll');
+
+                btn.setAttribute(
+                    'aria-expanded',
+                    'true'
+                );
+
+                btn.setAttribute(
+                    'aria-label',
+                    'Tutup menu'
+                );
+
+            }
+
+
+            btn.addEventListener(
+                'click',
+                function (event) {
+
+                    event.stopPropagation();
+
+                    const isOpen =
+                        navbar.classList.contains('open');
+
+
+                    if (isOpen) {
+
+                        closeMenu();
+
+                    } else {
+
+                        openMenu();
+
+                    }
+
+                }
+            );
+
+
+            /*
+             * Close menu ketika link diklik
+             */
+            nav.addEventListener(
+                'click',
+                function (event) {
+
+                    const target =
+                        event.target.closest('a');
+
+
+                    if (!target) {
+                        return;
+                    }
+
+
+                    closeMenu();
+
+                }
+            );
+
+
+            /*
+             * Close dengan tombol Escape
+             */
+            document.addEventListener(
+                'keydown',
+                function (event) {
+
+                    if (event.key === 'Escape') {
+
+                        closeMenu();
+
+                    }
+
+                }
+            );
+
+
+            /*
+             * Close ketika klik di luar navbar
+             */
+            document.addEventListener(
+                'click',
+                function (event) {
+
+                    if (!navbar.classList.contains('open')) {
+                        return;
+                    }
+
+
+                    if (event.target.closest('.navbar')) {
+                        return;
+                    }
+
+
+                    closeMenu();
+
+                }
+            );
+
+
+            /*
+             * Close menu ketika layar berubah ke desktop
+             */
+            window.addEventListener(
+                'resize',
+                function () {
+
+                    if (window.innerWidth > 600) {
+
+                        closeMenu();
+
+                    }
+
+                }
+            );
+
+        })();
+
+    </script>
+
 </body>
+
 </html>

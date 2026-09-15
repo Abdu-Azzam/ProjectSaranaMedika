@@ -1464,6 +1464,7 @@ html {
         margin-left: auto;
         padding: 9px 10px;
         font-size: 23px;
+        cursor: pointer;
     }
 
     /* Mobile navigation */
@@ -1471,6 +1472,7 @@ html {
         background: rgba(7,15,20,.96);
     }
 
+    .nav-menu.is-open,
     .navbar.open .nav-menu {
         position: fixed;
         top: 62px;

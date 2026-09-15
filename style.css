@@ -1953,3 +1953,354 @@ html {
         scroll-behavior: auto !important;
     }
 }
+
+/* =========================================================
+   OPENING SCREEN
+   Curtain / Reveal Animation
+   ========================================================= */
+
+.opening-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 15, 20, 0.98),
+            rgba(10, 24, 34, 0.98)
+        );
+
+    color: var(--color-white);
+
+    transform: translateY(0);
+    transition:
+        transform 1.2s cubic-bezier(0.77, 0, 0.18, 1),
+        visibility 0s linear 1.2s;
+}
+
+
+/* Garis dekorasi */
+
+.opening-screen::before {
+    position: absolute;
+    inset: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    content: "";
+    pointer-events: none;
+}
+
+
+/* Efek cahaya */
+
+.opening-screen::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 600px;
+    height: 600px;
+
+    background: radial-gradient(
+        circle,
+        rgba(0, 123, 255, 0.12),
+        transparent 65%
+    );
+
+    transform: translate(-50%, -50%);
+
+    content: "";
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   OPENING CONTENT
+   ========================================================= */
+
+.opening-content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* Nama perusahaan */
+
+.opening-label {
+    margin-bottom: 34px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+
+    animation: openingFadeUp 1s ease both;
+}
+
+
+/* =========================================================
+   OPEN BUTTON
+   ========================================================= */
+
+.opening-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--color-white);
+    cursor: pointer;
+    transition:
+        background 0.4s ease,
+        border-color 0.4s ease,
+        transform 0.4s ease;
+}
+
+.opening-button img {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    max-width: 95px;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition:
+        transform 0.5s ease,
+        opacity 0.4s ease;
+}
+
+.opening-button::before {
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    content: "";
+    transition:
+        transform 0.5s ease,
+        border-color 0.5s ease;
+}
+
+.opening-button:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.08);
+    transform: scale(1.04);
+}
+
+.opening-button:hover::before {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(0.9);
+}
+
+.opening-button:hover img {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+.opening-button i {
+    position: absolute;
+    right: -42px;
+    width: 28px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.7;
+    transition:
+        width 0.4s ease,
+        opacity 0.4s ease;
+}
+
+.opening-button:hover i {
+    width: 40px;
+    opacity: 1;
+}
+
+/* Hint */
+
+.opening-hint {
+    margin-top: 30px;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    animation: openingFadeUp 1s 0.25s ease both;
+}
+
+
+/* =========================================================
+   OPENING ANIMATION
+   ========================================================= */
+
+.opening-screen.is-opening {
+    transform: translateY(-100%);
+    visibility: hidden;
+}
+
+
+.opening-screen.is-opening .opening-content {
+    opacity: 0;
+
+    transform: translateY(-25px);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.5s ease;
+}
+
+
+/* =========================================================
+   INITIAL ANIMATION
+   ========================================================= */
+
+@keyframes openingFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   PREVENT SCROLL WHILE OPENING SCREEN IS ACTIVE
+   ========================================================= */
+
+body.opening-active {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+@media (max-width: 600px) {
+
+    .opening-screen::before {
+        inset: 18px;
+    }
+
+    .opening-label {
+        max-width: 280px;
+        margin-bottom: 28px;
+        font-size: 9px;
+        letter-spacing: 0.16em;
+    }
+
+    .opening-button {
+        width: 125px;
+        height: 125px;
+        padding: 20px;
+    }
+
+    .opening-button img {
+        max-width: 82px;
+    }
+
+    .opening-hint {
+        margin-top: 24px;
+        font-size: 9px;
+    }
+
+    .opening-button i {
+        right: -32px;
+        width: 22px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .opening-button {
+        width: 110px;
+        height: 110px;
+        padding: 18px;
+    }
+
+    .opening-button img {
+        max-width: 72px;
+    }
+
+    .opening-label {
+        max-width: 240px;
+        font-size: 8px;
+    }
+
+    .opening-hint {
+        margin-top: 20px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .opening-button {
+        width: 110px;
+        height: 110px;
+    }
+
+
+    .opening-label {
+        max-width: 240px;
+
+        font-size: 8px;
+    }
+
+
+    .opening-hint {
+        margin-top: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .opening-screen {
+        transition: none;
+    }
+
+    .opening-screen.is-opening {
+        transform: translateY(-100%);
+    }
+
+}

@@ -28,6 +28,38 @@
 <body>
 
     <!-- =====================================================
+     OPENING COVER
+====================================================== -->
+<div class="opening-screen" id="openingScreen">
+
+    <div class="opening-content">
+
+        <p class="opening-label">
+            PT INDOMAS SARANA MEDIKA
+        </p>
+
+       <button
+    type="button"
+    class="opening-button"
+    id="openingButton"
+    aria-label="Buka website"
+>
+    <img
+        src="icon2/logo.png"
+        alt="PT Indomas Sarana Medika"
+    >
+    <i></i>
+</button>
+
+        <p class="opening-hint">
+            Click to enter
+        </p>
+
+    </div>
+
+</div>
+
+    <!-- =====================================================
          NAVBAR
     ====================================================== -->
     <header class="navbar">
@@ -1400,6 +1432,42 @@
 
         (function () {
 
+                    /*
+         * Opening Screen
+         */
+        const openingScreen =
+            document.getElementById('openingScreen');
+
+        const openingButton =
+            document.getElementById('openingButton');
+
+
+        document.body.classList.add('opening-active');
+
+
+        if (openingButton && openingScreen) {
+
+            openingButton.addEventListener(
+                'click',
+                function () {
+
+                    openingScreen.classList.add('is-opening');
+
+                    document.body.classList.remove(
+                        'opening-active'
+                    );
+
+                    setTimeout(function () {
+
+                        openingScreen.remove();
+
+                    }, 1300);
+
+                }
+            );
+
+        }
+
             const btn = document.querySelector('.menu-toggle');
             const navbar = document.querySelector('.navbar');
             const nav = document.getElementById('main-nav');
@@ -1558,6 +1626,8 @@
             );
 
         })();
+
+
 
     </script>
 

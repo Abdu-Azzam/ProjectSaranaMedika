@@ -861,9 +861,10 @@ html {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 20px;
     align-items: start;
+    justify-items: center;
 }
 
 .service-card {
@@ -1115,7 +1116,7 @@ html {
    ========================= */
 @media (min-width: 1201px) {
     .service-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }
 
@@ -1215,7 +1216,7 @@ html {
     }
 
     .service-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 16px;
     }
 
@@ -1366,7 +1367,7 @@ html {
     }
 
     .service-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 12px;
     }
 

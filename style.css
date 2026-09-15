@@ -1742,7 +1742,7 @@ html {
     }
 
     .service-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
     }
 
@@ -1750,16 +1750,18 @@ html {
         display: flex;
         width: 100%;
         min-width: 0;
+        flex-direction: column;
         align-items: center;
-        gap: 14px;
-        padding: 10px;
-        text-align: left;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 8px;
+        text-align: center;
     }
 
     .service-card img {
-        width: 60px;
-        height: 60px;
-        flex: 0 0 60px;
+        width: clamp(52px, 18vw, 90px);
+        height: auto;
+        flex: 0 0 auto;
         margin: 0;
     }
 
@@ -1922,9 +1924,9 @@ html {
     }
 
     .service-card img {
-        width: 54px;
-        height: 54px;
-        flex-basis: 54px;
+        width: clamp(46px, 16vw, 72px);
+        height: auto;
+        flex-basis: auto;
     }
 
     .partner-logo {
